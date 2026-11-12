@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="Starting from the drive · Help · Shrimp">Uruchamianie z nośnika · Pomoc · Shrimp</title>
+<meta name="description" content="Jak komputer uruchamia się z nośnika Shrimp i co zrobić, gdy znowu startuje Windows." data-en="How the computer starts from the Shrimp drive, and what to do when Windows starts again instead.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/boot-from-usb">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Uruchamianie z nośnika · Pomoc · Shrimp">
+<meta property="og:description" content="Jak komputer uruchamia się z nośnika Shrimp i co zrobić, gdy znowu startuje Windows.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/boot-from-usb">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">Uruchamianie z nośnika</h1>
+    <p class="lead">Zwykle nie musisz nic robić. Po kliknięciu <b>Uruchom ponownie</b> w Shrimp Install komputer sam wystartuje z nośnika, a Setup poprowadzi instalację.</p>
+    <section>
+      <h2>Jak to działa</h2>
+      <p>Shrimp Install ustawia jednorazowy start z nośnika i wyłącza szybkie uruchamianie Windows, które mogłoby to zablokować. Nie trzeba wchodzić do ustawień BIOS ani UEFI. Kolejne uruchomienia wyglądają jak zwykle.</p>
+      <p>Przed ponownym uruchomieniem zapisz otwarte dokumenty. Nie odłączaj nośnika.</p>
+    </section>
+    <section>
+      <h2>Komputer znowu uruchomił Windows</h2>
+      <p><b>Sposób 1, z Windows.</b> Przytrzymaj klawisz <kbd>Shift</kbd> i kliknij <b>Start → Zasilanie → Uruchom ponownie</b>. Na niebieskim ekranie wybierz <b>Użyj urządzenia</b>, a potem swój nośnik.</p>
+      <p><b>Sposób 2, menu startowe.</b> Włącz komputer i od razu kilka razy naciśnij klawisz menu startowego, potem wybierz nośnik z listy. Najczęściej to:</p>
+      <ul>
+        <li><kbd>F12</kbd>: Dell, Lenovo, Acer i wiele innych,</li>
+        <li><kbd>Esc</kbd>: laptopy ASUS,</li>
+        <li><kbd>F9</kbd>: HP (czasem najpierw <kbd>Esc</kbd>),</li>
+        <li><kbd>F11</kbd>: MSI, <kbd>F8</kbd>: płyty główne ASUS.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Komunikaty w Shrimp Install</h2>
+      <ul>
+        <li><b>Ten komputer nie uruchamia się w trybie UEFI</b> albo <b>Firmware nie przyjął wpisu uruchamiania</b>: start z nośnika trzeba wybrać ręcznie, jednym ze sposobów powyżej.</li>
+        <li><b>Nie udało się uruchomić ponownie</b>: uruchom komputer ponownie z menu Start.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Secure Boot</h2>
+      <p>Zwykle nie trzeba go wyłączać. Jeśli komputer odmawia startu z nośnika z komunikatem o naruszeniu zabezpieczeń (<i>Secure Boot violation</i>), otwórz ustawienia UEFI i włącz opcję zezwalającą na certyfikaty firm trzecich (zwykle <b>Allow Microsoft 3rd Party UEFI CA</b>). Część nowych laptopów ma ją domyślnie wyłączoną.</p>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">Starting from the drive</h1>
+    <p class="lead">Usually you don't need to do anything. After you click <b>Restart</b> in Shrimp Install, the computer starts from the drive by itself and Setup guides you through the installation.</p>
+    <section>
+      <h2>How it works</h2>
+      <p>Shrimp Install sets a one-time start from the drive and turns off Windows fast startup, which could get in the way. There's no need to open the BIOS or UEFI settings. Later starts work as usual.</p>
+      <p>Save your open documents before restarting. Keep the drive plugged in.</p>
+    </section>
+    <section>
+      <h2>The computer started Windows again</h2>
+      <p><b>Way 1, from Windows.</b> Hold <kbd>Shift</kbd> and click <b>Start → Power → Restart</b>. On the blue screen, choose <b>Use a device</b>, then your drive.</p>
+      <p><b>Way 2, the boot menu.</b> Turn the computer on and press the boot menu key a few times right away, then pick the drive from the list. Most often it's:</p>
+      <ul>
+        <li><kbd>F12</kbd>: Dell, Lenovo, Acer and many others,</li>
+        <li><kbd>Esc</kbd>: ASUS laptops,</li>
+        <li><kbd>F9</kbd>: HP (sometimes after <kbd>Esc</kbd>),</li>
+        <li><kbd>F11</kbd>: MSI, <kbd>F8</kbd>: ASUS motherboards.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Messages in Shrimp Install</h2>
+      <ul>
+        <li><b>This computer doesn't start in UEFI mode</b> or <b>The firmware didn't accept the boot entry</b>: choose to start from the drive by hand, using one of the ways above.</li>
+        <li><b>Couldn't restart</b>: restart the computer from the Start menu.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Secure Boot</h2>
+      <p>Usually you don't need to turn it off. If the computer refuses to start from the drive with a <i>Secure Boot violation</i> message, open the UEFI settings and turn on the option that allows third-party certificates (usually <b>Allow Microsoft 3rd Party UEFI CA</b>). Some new laptops ship with it turned off.</p>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>

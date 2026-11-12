@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="NVIDIA driver · Help · Shrimp">Sterownik NVIDIA · Pomoc · Shrimp</title>
+<meta name="description" content="Który sterownik karty NVIDIA wybrać w Setup i co zrobić, gdy po jego instalacji ekran pozostaje czarny." data-en="Which NVIDIA graphics driver to choose in Setup, and what to do if the screen stays black after installing it.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/nvidia-driver">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Sterownik NVIDIA · Pomoc · Shrimp">
+<meta property="og:description" content="Który sterownik karty NVIDIA wybrać w Setup i co zrobić, gdy po jego instalacji ekran pozostaje czarny.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/nvidia-driver">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">Sterownik NVIDIA</h1>
+    <p class="lead">Gdy komputer ma kartę graficzną NVIDIA, Setup zaproponuje jej sterownik. Wybór możesz później zmienić.</p>
+    <section>
+      <h2>Który sterownik wybrać</h2>
+      <ul>
+        <li><b>Sterownik NVIDIA</b> (zalecany): pełna wydajność w grach i programach graficznych.</li>
+        <li><b>Sterownik otwarty</b>: prostszy, ale wolniejszy. Dobry wybór, gdy ze sterownikiem NVIDIA są kłopoty.</li>
+      </ul>
+      <p>Sterownik NVIDIA działa z kartami od serii GeForce GTX 16 i RTX 20 wzwyż. Starsze karty zawsze korzystają ze sterownika otwartego.</p>
+    </section>
+    <section>
+      <h2>Zmiana później</h2>
+      <p>Sterowniki i kodeki zainstalujesz albo zmienisz w aplikacji <b>Cocktail</b>. Tam też nadrobisz ten krok, jeśli w Setup wybrano <b>Zrobię to później</b>.</p>
+    </section>
+    <section>
+      <h2>Czarny ekran po instalacji sterownika</h2>
+      <ol>
+        <li>Uruchom komputer ponownie. Gdy pojawi się menu startowe, zaznacz pierwszą pozycję. Jeśli menu się nie pokazuje, podczas uruchamiania przytrzymaj <kbd>Shift</kbd> albo naciskaj <kbd>Esc</kbd>.</li>
+        <li>Naciśnij <kbd>E</kbd>, znajdź wiersz zaczynający się od <code>linux</code> i dopisz na jego końcu <code>shrimp.nouveau=1</code>.</li>
+        <li>Naciśnij <kbd>F10</kbd>. System uruchomi się ze sterownikiem otwartym.</li>
+        <li>W aplikacji Cocktail przełącz kartę na sterownik otwarty, żeby kolejne uruchomienia działały bez tej zmiany.</li>
+      </ol>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">NVIDIA driver</h1>
+    <p class="lead">If the computer has an NVIDIA graphics card, Setup offers a driver for it. You can change your choice later.</p>
+    <section>
+      <h2>Which driver to choose</h2>
+      <ul>
+        <li><b>NVIDIA driver</b> (recommended): full performance in games and graphics programs.</li>
+        <li><b>Open driver</b>: simpler but slower. A good choice when the NVIDIA driver causes trouble.</li>
+      </ul>
+      <p>The NVIDIA driver works with GeForce GTX 16 and RTX 20 series cards and newer. Older cards always use the open driver.</p>
+    </section>
+    <section>
+      <h2>Changing it later</h2>
+      <p>You can install or change drivers and codecs in the <b>Cocktail</b> app. If you chose <b>I'll do it later</b> in Setup, that's where to do it.</p>
+    </section>
+    <section>
+      <h2>Black screen after installing the driver</h2>
+      <ol>
+        <li>Restart the computer. When the boot menu appears, highlight the first entry. If the menu doesn't show, hold <kbd>Shift</kbd> or keep pressing <kbd>Esc</kbd> while the computer starts.</li>
+        <li>Press <kbd>E</kbd>, find the line that starts with <code>linux</code> and add <code>shrimp.nouveau=1</code> at its end.</li>
+        <li>Press <kbd>F10</kbd>. The system starts with the open driver.</li>
+        <li>In the Cocktail app, switch the card to the open driver so later starts work without this change.</li>
+      </ol>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>

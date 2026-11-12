@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="BitLocker · Help · Shrimp">BitLocker · Pomoc · Shrimp</title>
+<meta name="description" content="Gdy dysk z Windows jest zaszyfrowany funkcją BitLocker, Shrimp zainstalujesz zamiast Windows albo po wyłączeniu szyfrowania." data-en="If the Windows drive is encrypted with BitLocker, you can install Shrimp instead of Windows, or turn encryption off first.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/bitlocker">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="BitLocker · Pomoc · Shrimp">
+<meta property="og:description" content="Gdy dysk z Windows jest zaszyfrowany funkcją BitLocker, Shrimp zainstalujesz zamiast Windows albo po wyłączeniu szyfrowania.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/bitlocker">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">BitLocker</h1>
+    <p class="lead">Gdy dysk z Windows jest zaszyfrowany funkcją BitLocker, Shrimp można zainstalować tylko zamiast Windows. Aby zostawić Windows, najpierw wyłącz szyfrowanie.</p>
+    <section>
+      <h2>Dlaczego</h2>
+      <p>Żeby zrobić miejsce na Shrimp obok Windows, Setup zmniejsza partycję Windows. Partycji zaszyfrowanej funkcją BitLocker nie da się bezpiecznie zmniejszyć spoza Windows. Shrimp Install pokazuje ostrzeżenie już na pierwszym ekranie, a Setup wyłącza wtedy wybór <b>Obok Windows</b>.</p>
+    </section>
+    <section>
+      <h2>Możliwość 1: zamiast Windows</h2>
+      <p>Windows zostanie usunięty, a pliki skopiowane przez Shrimp Install trafią do nowego systemu. Sprawdź wcześniej, czy kopia obejmuje wszystko, czego potrzebujesz (zobacz <a href="/help/copy-files">Kopia plików z Windows</a>).</p>
+    </section>
+    <section>
+      <h2>Możliwość 2: wyłącz szyfrowanie i zostaw Windows</h2>
+      <ol>
+        <li>W Windows otwórz <b>Ustawienia → Prywatność i zabezpieczenia → Szyfrowanie urządzenia</b> (Windows 10: <b>Aktualizacja i zabezpieczenia → Szyfrowanie urządzenia</b>) i wyłącz szyfrowanie.</li>
+        <li>Jeśli nie ma tam tej opcji, otwórz <b>Panel sterowania → System i zabezpieczenia → Szyfrowanie dysków funkcją BitLocker</b> i kliknij <b>Wyłącz funkcję BitLocker</b>.</li>
+        <li>Poczekaj, aż odszyfrowanie się skończy. Może potrwać od kilkunastu minut do kilku godzin. W tym czasie możesz normalnie korzystać z komputera.</li>
+        <li>Uruchom Shrimp Install jeszcze raz. Ostrzeżenie o BitLockerze zniknie.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Klucz odzyskiwania</h2>
+      <p>Jeśli Windows zostaje na komputerze, zapisz klucz odzyskiwania BitLocker, zanim zaczniesz. Zmiana sposobu uruchamiania może sprawić, że Windows raz o niego poprosi. Klucz znajdziesz na swoim koncie Microsoft pod adresem <a href="https://aka.ms/myrecoverykey">aka.ms/myrecoverykey</a>.</p>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">BitLocker</h1>
+    <p class="lead">If the Windows drive is encrypted with BitLocker, Shrimp can only be installed instead of Windows. To keep Windows, turn encryption off first.</p>
+    <section>
+      <h2>Why</h2>
+      <p>To make room for Shrimp next to Windows, Setup shrinks the Windows partition. A partition encrypted with BitLocker can't be shrunk safely from outside Windows. Shrimp Install warns you on its first screen, and Setup then turns off the <b>Next to Windows</b> choice.</p>
+    </section>
+    <section>
+      <h2>Option 1: instead of Windows</h2>
+      <p>Windows will be removed, and the files Shrimp Install copied go to the new system. Check first that the copy includes everything you need (see <a href="/help/copy-files">Copying your files from Windows</a>).</p>
+    </section>
+    <section>
+      <h2>Option 2: turn off encryption and keep Windows</h2>
+      <ol>
+        <li>In Windows, open <b>Settings → Privacy &amp; security → Device encryption</b> (Windows 10: <b>Update &amp; Security → Device encryption</b>) and turn encryption off.</li>
+        <li>If that option isn't there, open <b>Control Panel → System and Security → BitLocker Drive Encryption</b> and click <b>Turn off BitLocker</b>.</li>
+        <li>Wait until decryption finishes. It can take from a few minutes to a few hours. You can keep using the computer meanwhile.</li>
+        <li>Run Shrimp Install again. The BitLocker warning will be gone.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Recovery key</h2>
+      <p>If Windows stays on the computer, save your BitLocker recovery key before you start. Changing how the computer starts can make Windows ask for it once. You'll find the key in your Microsoft account at <a href="https://aka.ms/myrecoverykey">aka.ms/myrecoverykey</a>.</p>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>

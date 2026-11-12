@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="Download · Shrimp">Pobierz · Shrimp</title>
+<meta name="description" content="Pobierz Shrimp Beta: instalator dla Windows 10 i 11 albo obraz ISO. Stan wydania i kolejne kroki." data-en="Download Shrimp Beta: the installer for Windows 10 and 11 or the ISO image. Release status and next steps.">
+<link rel="canonical" href="https://shrimp-organization.dev/download/">
+<link rel="alternate" hreflang="pl" href="https://shrimp-organization.dev/download/?lang=pl">
+<link rel="alternate" hreflang="en" href="https://shrimp-organization.dev/download/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://shrimp-organization.dev/download/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shrimp">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Pobierz Shrimp">
+<meta property="og:description" content="Linux gotowy od pierwszego uruchomienia.">
+<meta property="og:url" content="https://shrimp-organization.dev/download/">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<meta property="og:image:alt" content="Logo Shrimp">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/mont-blanc.jpg" as="image">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body class="home dlpage" data-head="dark">
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-down" viewBox="0 0 16 16"><path d="m 13.996094 5 l -5.996094 6 l -6.003906 -6 z m 0 0"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 16 16"><path d="m 1 2 h 14 v 2 h -14 z m 0 0"/><path d="m 1 7 h 14 v 2 h -14 z m 0 0"/><path d="m 1 12 h 14 v 2 h -14 z m 0 0"/></symbol>
+    <symbol id="i-save" viewBox="0 0 16 16"><path d="m 8 0 c -0.550781 0 -1 0.449219 -1 1 v 8.585938 l -1.292969 -1.292969 c -0.1875 -0.1875 -0.441406 -0.292969 -0.707031 -0.292969 s -0.519531 0.105469 -0.707031 0.292969 c -0.390625 0.390625 -0.390625 1.023437 0 1.414062 l 3 3 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 l 3 -3 c 0.390625 -0.390625 0.390625 -1.023437 0 -1.414062 s -1.023437 -0.390625 -1.414062 0 l -1.292969 1.292969 v -8.585938 c 0 -0.550781 -0.449219 -1 -1 -1 z m -7 14 v 2 h 14 v -2 z m 0 0"/></symbol>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" data-t-aria="menu.aria" aria-label="Menu"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-menu"/></svg></button>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-labelledby="burger">
+  <ul>
+    <li><a href="/download/" style="--i:0" data-t="dl.short">Pobierz</a></li>
+    <li><a href="/apps/" style="--i:1" data-t="menu.apps">Aplikacje</a></li>
+    <li><a href="/about/" style="--i:2" data-t="menu.about">O nas</a></li>
+    <li><a href="/project/" style="--i:3" data-t="menu.project">Projekt</a></li>
+    <li><a href="/docs/" style="--i:4" data-t="menu.docs">Dokumenty</a></li>
+    <li><a href="/links/" style="--i:5" data-t="menu.links">Linki</a></li>
+    <li><a href="/support/" style="--i:6" data-t="menu.support">Wsparcie</a></li>
+    <li><a href="/help/" style="--i:7" data-t="nav.help">Pomoc</a></li>
+  </ul>
+  <div class="langs" role="group" aria-label="Język / Language">
+    <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<main id="main">
+  <section class="dl-hero" data-head="dark" data-head-light-from="0.74" aria-labelledby="h">
+    <div class="dl-bg" aria-hidden="true"></div>
+    <h1 class="h1 rise" style="--i:0" id="h">Shrimp<sup class="beta">beta</sup></h1>
+    <div class="dlmenu rise" style="--i:1">
+    <div class="dlsplit">
+      <a class="btn" href="/download/install" data-dl><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-save"/></svg><span class="label"><span class="now" data-t="dl.label">Instalator</span><span class="then" aria-hidden="true" data-t="dl.going">Pobieranie…</span></span></a>
+      <button class="dlmore" type="button" id="dlmore" aria-expanded="false" aria-controls="dlpop" data-t-aria="dl.more" aria-label="Inne opcje pobierania"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-down"/></svg></button>
+    </div>
+      <div class="dlpop" id="dlpop">
+        <a href="/download/install" data-t="dl.label">Instalator</a>
+        <a href="/iso" data-t="menu.iso">Obraz ISO</a>
+      </div>
+    </div>
+    <p class="meta rise" style="--i:2" data-t="dl.os">Windows 10 i 11</p>
+    <p class="beta-note rise" style="--i:3" data-t="dl.beta">Shrimp Beta 4.1 jest w zamkniętych testach. To wersja próbna: może zawierać błędy, więc nie instaluj jej na komputerze, bez którego nie możesz się obejść.</p>
+  </section>
+
+  <section class="status light" data-head="light" aria-labelledby="h-st">
+    <svg class="graph" viewBox="0 0 1200 220" aria-hidden="true" focusable="false">
+      <g fill="none" stroke-width="3" stroke-linecap="round">
+        <path class="past" d="M-20 196 C70 196 70 110 150 110"/>
+        <path class="past" d="M-20 110 H640"/>
+        <path class="past" d="M150 110 C210 110 210 34 270 34 H410 C470 34 470 110 530 110"/>
+        <path class="next" d="M640 110 H1220"/>
+        <path class="next" d="M640 110 C700 110 700 186 760 186 H1220"/>
+        <path class="next" d="M900 110 C960 110 960 34 1020 34 H1220"/>
+      </g>
+      <circle class="dot" cx="150" cy="110" r="7"/><circle class="dot" cx="340" cy="34" r="7"/><circle class="dot" cx="530" cy="110" r="7"/>
+      <circle class="now" cx="640" cy="110" r="12"/>
+      <circle class="open" cx="900" cy="110" r="7"/><circle class="open" cx="860" cy="186" r="7"/><circle class="open" cx="1110" cy="34" r="7"/>
+    </svg>
+    <div class="status-in">
+      <h2 class="h2 reveal" id="h-st" data-t="st.t">Stan systemu</h2>
+      <ul class="states">
+        <li class="reveal" style="--i:0"><span class="tag now" data-t="st.now">Teraz</span><h3>Shrimp Beta 4.1</h3><p data-t="st.1">Zamknięte testy. To aktualna wersja systemu.</p></li>
+        <li class="reveal" style="--i:1"><span class="tag now" data-t="st.now">Teraz</span><h3>Shrimp Install</h3><p data-t="st.2">Instalator dla Windows 10 i 11, testowany razem z betą.</p></li>
+        <li class="reveal" style="--i:2"><span class="tag" data-t="st.next">Następny krok</span><h3 data-t="st.3t">Otwarta beta</h3><p data-t="st.3">Wtedy ruszy publiczne pobieranie instalatora i obrazu ISO.</p></li>
+        <li class="reveal" style="--i:3"><span class="tag" data-t="st.later">Później</span><h3>Shrimp 26 „Mont Blanc”</h3><p data-t="st.4">Pierwsze pełne wydanie, po zakończeniu otwartej bety.</p></li>
+      </ul>
+    </div>
+    <footer>
+      <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+      <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+    </footer>
+  </section>
+</main>
+
+</body>
+</html>

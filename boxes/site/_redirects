@@ -1,0 +1,16 @@
+# Cloudflare Pages: przekierowania (https://developers.cloudflare.com/pages/configuration/redirects/)
+#
+# ADRES POBIERANIA SHRIMP INSTALL: jedyne miejsce, które trzeba zmienić.
+# Przyciski pobierania instalatora prowadzą do /download/install (/download/ to zakładka „Pobierz”).
+# Dopóki poniższa linia jest wyłączona (#), /download/install pokazuje stronę „Shrimp Install jest prawie gotowy”
+# (site/download/install/index.html).
+# Gdy plik .exe będzie publicznie dostępny, usuń # i wpisz jego adres, np. w R2:
+# /download/install  https://dl.shrimp-organization.dev/shrimp-install.exe  302
+#
+# ADRES OBRAZU ISO (opcja „Obraz ISO” pod strzałką przycisku pobierania): to samo co wyżej. Dopóki linia jest
+# wyłączona (#), /iso pokazuje stronę site/iso/index.html. Obraz jest dla zaawansowanych, zalecany jest Shrimp Install.
+# /iso  https://dl.shrimp-organization.dev/shrimp.iso  302
+#
+# Strony pomocy: każdy temat z boxes/help-links/help.json ma plik help/<ścieżka>.html (adres /help/<ścieżka>).
+# Bez reguły /help/*: przekierowania w Cloudflare Pages mają pierwszeństwo przed plikami, więc taka reguła
+# zasłoniłaby prawdziwe strony. Nieznany temat pokazuje 404.html. Pliki pilnuje tools/check-site.py (workflow Strona).

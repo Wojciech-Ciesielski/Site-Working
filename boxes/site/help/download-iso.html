@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="Downloading Shrimp · Help · Shrimp">Pobieranie Shrimp · Pomoc · Shrimp</title>
+<meta name="description" content="Shrimp Install sam pobiera i sprawdza system. Nie musisz szukać pliku ISO." data-en="Shrimp Install downloads and verifies the system for you. No need to look for an ISO file.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/download-iso">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Pobieranie Shrimp · Pomoc · Shrimp">
+<meta property="og:description" content="Shrimp Install sam pobiera i sprawdza system. Nie musisz szukać pliku ISO.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/download-iso">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">Pobieranie Shrimp</h1>
+    <p class="lead">Shrimp Install sam pobiera system i sprawdza, czy dotarł cały. Nie musisz szukać ani zapisywać pliku ISO.</p>
+    <section>
+      <h2>Co dzieje się po kliknięciu „Przygotuj nośnik”</h2>
+      <p>Shrimp Install pobiera najnowszą wersję Shrimp (około 2 GB), a potem sprawdza jej sumę kontrolną SHA-256. Obraz uszkodzony albo niepełny nie trafi na nośnik. Postęp, prędkość i pozostały czas widać na ekranie <b>Przygotowanie Shrimp</b>.</p>
+      <p>Jeśli przerwiesz przygotowanie, gdy obraz był już pobrany w całości, przy następnej próbie Shrimp Install najpierw sprawdzi ten plik i nie będzie pobierał go od nowa.</p>
+    </section>
+    <section>
+      <h2>Gdy pobieranie się nie udaje</h2>
+      <ul>
+        <li><b>Brak połączenia z internetem</b> albo <b>Nie można połączyć się z serwerem pobierania</b>: zobacz <a href="/help/no-internet">Brak internetu</a>.</li>
+        <li><b>Serwer pobierania odpowiedział kodem…</b>: kłopot jest po naszej stronie. Spróbuj ponownie za kilka minut.</li>
+        <li><b>Pobrany obraz jest uszkodzony</b>: kliknij <b>Spróbuj ponownie</b>. Gdy błąd wraca, wyłącz na chwilę VPN albo spróbuj innej sieci.</li>
+        <li><b>Za mało miejsca na dysku</b>: obraz zapisuje się tymczasowo na dysku z Windows. Zwolnij co najmniej 3 GB i spróbuj ponownie.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Czy mogę zainstalować Shrimp z samego pliku ISO?</h2>
+      <p>Nie. Obraz Shrimp jest przygotowany do pracy z Shrimp Install. To Shrimp Install zapisuje nośnik, kopiuje Twoje pliki i zapamiętuje ustawienia Windows (język, strefę czasową, klawiaturę i listę programów), z których korzysta potem Setup.</p>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">Downloading Shrimp</h1>
+    <p class="lead">Shrimp Install downloads the system and checks that all of it arrived. You don't need to find or save an ISO file.</p>
+    <section>
+      <h2>What happens after you click “Prepare the drive”</h2>
+      <p>Shrimp Install downloads the latest version of Shrimp (about 2 GB) and then checks its SHA-256 checksum. A damaged or incomplete image never reaches the drive. Progress, speed and the time left are shown on the <b>Preparing Shrimp</b> screen.</p>
+      <p>If you cancel after the image has fully downloaded, Shrimp Install checks that file on the next try instead of downloading it again.</p>
+    </section>
+    <section>
+      <h2>When the download fails</h2>
+      <ul>
+        <li><b>No internet connection</b> or <b>Can't connect to the download server</b>: see <a href="/help/no-internet">No internet</a>.</li>
+        <li><b>The download server responded with code…</b>: the problem is on our side. Try again in a few minutes.</li>
+        <li><b>The downloaded image is damaged</b>: click <b>Try again</b>. If it keeps happening, turn off your VPN for a moment or try another network.</li>
+        <li><b>Not enough disk space</b>: the image is stored temporarily on the Windows drive. Free up at least 3 GB and try again.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Can I install Shrimp from the ISO file alone?</h2>
+      <p>No. The Shrimp image is made to work with Shrimp Install. Shrimp Install writes the drive, copies your files and remembers your Windows settings (language, time zone, keyboard and the list of programs), which Setup uses later.</p>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>
