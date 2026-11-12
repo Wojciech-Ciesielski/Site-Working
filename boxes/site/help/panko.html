@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="Panko · Help · Shrimp">Panko · Pomoc · Shrimp</title>
+<meta name="description" content="Jak w Panko cofnąć zmiany w systemie: przywrócić pojedyncze pliki albo cały system z migawki." data-en="How to undo changes to the system with Panko: restore single files or the whole system from a snapshot.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/panko">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Panko · Pomoc · Shrimp">
+<meta property="og:description" content="Jak w Panko cofnąć zmiany w systemie: przywrócić pojedyncze pliki albo cały system z migawki.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/panko">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">Panko</h1>
+    <p class="lead">Panko cofa zmiany w systemie. Przywraca pojedyncze pliki albo cały system do chwili, gdy wszystko działało.</p>
+    <section>
+      <h2>Migawki</h2>
+      <p>Migawka to zapis stanu systemu z danej chwili. Shrimp tworzy je sam: przed każdą aktualizacją i po niej oraz regularnie co jakiś czas. Przed większą zmianą możesz też utworzyć migawkę ręcznie: <b>Utwórz migawkę</b>, krótki opis i <b>Utwórz</b>.</p>
+    </section>
+    <section>
+      <h2>Przywracanie całego systemu</h2>
+      <ol>
+        <li>Zaznacz migawkę z chwili, gdy wszystko działało, na przykład <b>Przed aktualizacją</b>.</li>
+        <li>Kliknij <b>Przywróć system</b> i potwierdź.</li>
+        <li>Komputer uruchomi się ponownie w stanie z migawki.</li>
+      </ol>
+      <p>Przed przywróceniem Panko tworzy nową migawkę, więc i tę zmianę da się cofnąć.</p>
+    </section>
+    <section>
+      <h2>Przywracanie pojedynczych plików</h2>
+      <ol>
+        <li>Zaznacz migawkę i kliknij <b>Pokaż zmiany</b>.</li>
+        <li>Zaznacz pliki, które chcesz cofnąć.</li>
+        <li>Kliknij <b>Przywróć wybrane</b>.</li>
+      </ol>
+      <p>Plików systemowych z <code>/usr</code> nie da się przywrócić pojedynczo. Dla nich użyj <b>Przywróć system</b>.</p>
+    </section>
+    <section>
+      <h2>Folder domowy i miejsce na dysku</h2>
+      <p>W zakładce <b>Zaawansowane</b> włączysz migawki folderu domowego i ustawisz czyszczenie: <b>Usuwaj stare migawki</b> starsze niż wybrana liczba dni oraz limit miejsca na dysku.</p>
+      <p>Migawki nie zastępują kopii zapasowej na innym dysku: są na tym samym dysku co system.</p>
+    </section>
+    <section>
+      <h2>Hasło</h2>
+      <p>Przywracanie zmienia pliki systemu, więc Panko poprosi o Twoje hasło. To normalne i chroni komputer.</p>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">Panko</h1>
+    <p class="lead">Panko undoes changes to the system. It restores single files or the whole system to a moment when everything worked.</p>
+    <section>
+      <h2>Snapshots</h2>
+      <p>A snapshot records the state of the system at one moment. Shrimp makes them by itself: before and after every update, and regularly over time. Before a bigger change you can also make one by hand: <b>Create snapshot</b>, a short description, then <b>Create</b>.</p>
+    </section>
+    <section>
+      <h2>Restoring the whole system</h2>
+      <ol>
+        <li>Select a snapshot from when everything worked, for example <b>Before update</b>.</li>
+        <li>Click <b>Restore system</b> and confirm.</li>
+        <li>The computer restarts in the state from the snapshot.</li>
+      </ol>
+      <p>Before restoring, Panko makes a new snapshot, so this change can be undone too.</p>
+    </section>
+    <section>
+      <h2>Restoring single files</h2>
+      <ol>
+        <li>Select a snapshot and click <b>Show changes</b>.</li>
+        <li>Tick the files you want to undo.</li>
+        <li>Click <b>Restore selected</b>.</li>
+      </ol>
+      <p>System files in <code>/usr</code> can't be restored one by one. Use <b>Restore system</b> for them.</p>
+    </section>
+    <section>
+      <h2>Home folder and disk space</h2>
+      <p>In the <b>Advanced</b> tab you can turn on snapshots of your home folder and set up cleanup: <b>Delete old snapshots</b> older than a chosen number of days, and a disk space limit.</p>
+      <p>Snapshots don't replace a backup on another disk: they live on the same disk as the system.</p>
+    </section>
+    <section>
+      <h2>Password</h2>
+      <p>Restoring changes system files, so Panko asks for your password. That's normal and protects your computer.</p>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>

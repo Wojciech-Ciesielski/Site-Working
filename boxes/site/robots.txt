@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shrimp-organization.dev/sitemap.xml

@@ -1,0 +1,3 @@
+Ikony na stronie (symbole w index.html: i-ready, i-folder, i-play, i-undo, i-refresh, i-look, i-down, i-menu, i-save)
+pochodzą z motywu Adwaita (adwaita-icon-theme, GNOME), CC-BY-SA-3.0 / LGPL-3.0.
+https://gitlab.gnome.org/GNOME/adwaita-icon-theme

@@ -1,0 +1,40 @@
+name: Strona
+
+# Strona shrimp-organization.dev (boxes/site, Cloudflare Pages bez kroku budowy): sprawdzenie przed wdrożeniem.
+# CSP i skrypty inline, linki i zasoby, strony dla tematów z boxes/help-links/help.json, składnia site.js.
+# Na koniec Cloudflare Pages (wrangler pages dev) podaje każdą stronę z sitemap.xml z kodem 200.
+on:
+  push:
+    paths: ["boxes/site/**", "boxes/help-links/**", "boxes/shrimp-box/**", "containers/site.toml", "tools/check-site.py", ".github/workflows/site.yml"]
+  pull_request:
+    paths: ["boxes/site/**", "boxes/help-links/**", "boxes/shrimp-box/**", "containers/site.toml", "tools/check-site.py", ".github/workflows/site.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with: { node-version: 22 }
+      - name: Sprawdzenie plików strony
+        run: python3 tools/check-site.py
+      - name: Składnia site.js
+        run: node --check boxes/site/assets/site.js
+      - name: Strona w Cloudflare Pages lokalnie (przekierowania, nagłówki, adresy pomocy)
+        working-directory: boxes/site
+        run: |
+          npx --yes wrangler@3 pages dev . --port 8788 > /tmp/wrangler.log 2>&1 &
+          for i in $(seq 60); do curl -fs -o /dev/null http://localhost:8788/ && break; sleep 1; done
+          fail=0
+          for u in $(grep -o '<loc>[^<]*' sitemap.xml | sed 's#<loc>https://[^/]*##'); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "http://localhost:8788${u}?lang=en&from=install")
+            echo "$code $u"; [ "$code" = 200 ] || fail=1
+          done
+          code=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8788/help/nie-ma-takiej-strony)
+          echo "$code /help/nie-ma-takiej-strony (oczekiwane 404)"; [ "$code" = 404 ] || fail=1
+          curl -sI http://localhost:8788/ | grep -qi '^content-security-policy:' || { echo "brak CSP"; fail=1; }
+          [ $fail = 0 ] || { cat /tmp/wrangler.log; exit 1; }

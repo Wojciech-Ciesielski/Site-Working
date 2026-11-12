@@ -1,0 +1,8 @@
+[box]
+id = "site"
+version = "0.1.0"
+kind = "web"
+platform = "web"
+summary = "Strona projektu (Cloudflare Pages: katalog wyjściowy boxes/site)"
+# help.json: każdy temat pomocy ma stronę help/<ścieżka>.html (sprawdza tools/check-site.py)
+build_depends = ["help-links"]

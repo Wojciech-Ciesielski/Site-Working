@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="The USB drive · Help · Shrimp">Nośnik · Pomoc · Shrimp</title>
+<meta name="description" content="Jaki pendrive, karta SD albo dysk zewnętrzny nadaje się dla Shrimp i co stanie się z plikami, które są na nim teraz." data-en="Which USB stick, SD card or external drive works for Shrimp, and what happens to the files that are on it now.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/usb-drive">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Nośnik · Pomoc · Shrimp">
+<meta property="og:description" content="Jaki pendrive, karta SD albo dysk zewnętrzny nadaje się dla Shrimp i co stanie się z plikami, które są na nim teraz.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/usb-drive">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">Nośnik</h1>
+    <p class="lead">Shrimp Install zapisuje Shrimp na pendrivie, karcie SD albo dysku zewnętrznym USB. Z tego nośnika komputer uruchomi instalację.</p>
+    <section>
+      <h2>Jaki nośnik wybrać</h2>
+      <p>Potrzeba co najmniej <b>16 GB</b>. Dokładną wartość pokazuje ekran <b>Wybierz nośnik</b>. Na tym samym nośniku zapisuje się też kopia Twoich plików z Windows, więc większy nośnik pomieści ich więcej.</p>
+      <p>Lista pokazuje tylko nośniki zewnętrzne. Dysków wewnętrznych komputera nie da się wybrać, więc nie skasujesz przez pomyłkę dysku z Windows.</p>
+    </section>
+    <section>
+      <h2>Co stanie się z plikami na nośniku</h2>
+      <p>Nośnik zostanie sformatowany. Zanim to nastąpi, Shrimp Install kopiuje jego zawartość i sprawdza, czy kopia jest wierna.</p>
+      <p>Po instalacji Setup pokaże krok <b>Przywróć pendrive</b>. Podłącz ten sam nośnik, a pliki wrócą na niego i będzie działał jak dawniej. Możesz też wybrać <b>Zostaw pliki na tym komputerze</b>: znajdziesz je wtedy w folderze <b>Pendrive</b> w folderze domowym.</p>
+    </section>
+    <section>
+      <h2>Nośnika nie ma na liście</h2>
+      <ul>
+        <li>Podłącz go bezpośrednio do komputera, bez koncentratora USB, i poczekaj chwilę. Lista odświeża się sama.</li>
+        <li>Nośnik oznaczony jako <b>Za mały</b> ma mniej miejsca, niż potrzeba. Wybierz większy.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Komunikaty podczas zapisu</h2>
+      <ul>
+        <li><b>Nośnik jest używany</b>: zamknij programy, które z niego korzystają (na przykład Eksplorator plików albo program do kopii zapasowych), i spróbuj jeszcze raz.</li>
+        <li><b>Nośnik został odłączony</b>: nie odłączaj nośnika do końca przygotowania. Podłącz go ponownie i spróbuj jeszcze raz.</li>
+        <li><b>Nie udało się zapisać nośnika</b>: spróbuj innego portu USB albo innego nośnika. Część starych lub tanich pendrive'ów psuje się przy dużych zapisach.</li>
+      </ul>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">The USB drive</h1>
+    <p class="lead">Shrimp Install writes Shrimp to a USB stick, an SD card or an external USB drive. The computer starts the installation from it.</p>
+    <section>
+      <h2>Which drive to choose</h2>
+      <p>You need at least <b>16 GB</b>. The exact amount is shown on the <b>Choose a drive</b> screen. The copy of your Windows files goes on the same drive, so a bigger drive holds more of them.</p>
+      <p>The list only shows external drives. The computer's internal disks can't be chosen, so you can't wipe the Windows disk by mistake.</p>
+    </section>
+    <section>
+      <h2>What happens to the files on the drive</h2>
+      <p>The drive will be formatted. Before that, Shrimp Install copies what is on it and checks that the copy is exact.</p>
+      <p>After installation, Setup shows a <b>Restore your USB drive</b> step. Plug in the same drive and the files go back onto it, so it works as before. You can also pick <b>Keep the files on this computer</b>: you'll find them in the <b>Pendrive</b> folder in your home folder.</p>
+    </section>
+    <section>
+      <h2>The drive isn't on the list</h2>
+      <ul>
+        <li>Plug it straight into the computer, not through a USB hub, and wait a moment. The list refreshes by itself.</li>
+        <li>A drive marked <b>Too small</b> has less space than needed. Choose a bigger one.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Messages while writing</h2>
+      <ul>
+        <li><b>The drive is in use</b>: close programs that use it (for example File Explorer or a backup program) and try again.</li>
+        <li><b>The drive was disconnected</b>: keep the drive plugged in until preparation finishes. Plug it back in and try again.</li>
+        <li><b>Couldn't write to the drive</b>: try another USB port or another drive. Some old or cheap USB sticks fail during large writes.</li>
+      </ul>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>
