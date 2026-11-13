@@ -2,7 +2,7 @@
 
 Repozytorium robocze strony **shrimp-organization.dev** (Cloudflare Pages, bez kroku budowy). Strona nie ma wydań: każda zmiana na `main` to wdrożenie.
 
-- Kod: `boxes/site/` (katalog wyjściowy Cloudflare Pages: `boxes/site`). Pobieranie programu: jedna linia w `boxes/site/_redirects`.
+- Kod: `boxes/site/` (katalog wyjściowy Cloudflare Pages: `boxes/site`). Wdrożenie: Cloudflare Workers (projekt `site`, `wrangler.jsonc`): pliki z R2 pod `/download/<plik>` (`boxes/site/_worker.js`). Pobieranie programu: jedna linia w `boxes/site/_redirects`.
 - Adresy pomocy z aplikacji: box `help-links` (`help.json`). To repozytorium jest jego źródłem; kopie są w Shrimps-Working i Install-Working.
 - Sprawdzenie przed wdrożeniem: workflow **Strona** (`tools/check-site.py`, Cloudflare Pages lokalnie).
 

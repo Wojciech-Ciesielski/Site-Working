@@ -1,0 +1,17 @@
+// Cloudflare Workers (projekt „site”, Workers Builds): strona z . jako zasoby statyczne
+// (_headers i _redirects działają jak w Pages) i worker tylko dla /download/<plik> z R2.
+// Taki sam plik jest w katalogu głównym repo i w boxes/site, bo zależy to od katalogu ustawionego w Cloudflare.
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "site",
+  "main": "_worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/download/*", "!/download/", "!/download/install/*"]
+  },
+  "r2_buckets": [{ "binding": "SHRIMP_ISO", "bucket_name": "site-iso-download" }]
+}

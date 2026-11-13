@@ -4,9 +4,10 @@ use crate::model::{Kind, Repo};
 use crate::{ci, graph, kiwi};
 use std::fs;
 
-/// Co może leżeć w korzeniu repo poza boxami (narzędzia repo, CI, opisy).
+/// Co może leżeć w korzeniu repo poza boxami (narzędzia repo, CI, opisy, wrangler.jsonc wdrożenia strony).
 const TOP_LEVEL: &[&str] = &[
     "boxes", "containers", "tools", ".github", ".git", ".gitignore", "README.md", "OPEN-SOURCE.md", "out", "test-results",
+    "wrangler.jsonc",
 ];
 
 pub fn check(repo: &Repo) -> Vec<String> {
