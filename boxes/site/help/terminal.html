@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title data-en="Cherry · Help · Shrimp">Cherry · Pomoc · Shrimp</title>
-<meta name="description" content="Jak pracować w terminalu Cherry: tłumaczenie komend, notatki, skróty i historia." data-en="How to work in the Cherry terminal: command explanations, notes, shortcuts and history.">
+<meta name="description" content="Jak pracować w terminalu Cherry: karty, skróty jak w Windows, notatki, historia i narzędzia." data-en="How to work in the Cherry terminal: tabs, Windows-style shortcuts, notes, history and tools.">
 <link rel="canonical" href="https://shrimp-organization.dev/help/terminal">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Cherry · Pomoc · Shrimp">
-<meta property="og:description" content="Jak pracować w terminalu Cherry: tłumaczenie komend, notatki, skróty i historia.">
+<meta property="og:description" content="Jak pracować w terminalu Cherry: karty, skróty jak w Windows, notatki, historia i narzędzia.">
 <meta property="og:url" content="https://shrimp-organization.dev/help/terminal">
 <meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -38,50 +38,54 @@
   <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
   <article data-l="pl" lang="pl" aria-labelledby="h-pl">
     <h1 class="h2" id="h-pl">Cherry</h1>
-    <p class="lead">Cherry to terminal Shrimp. Wpisujesz w nim komendy jak w każdym terminalu, a obok widzisz prostym językiem, co robią.</p>
+    <p class="lead">Cherry to terminal Shrimp z powłoką zsh. Karty są w pionowym pasku po lewej, a terminal zajmuje resztę okna.</p>
     <section>
-      <h2>Jak to działa?</h2>
-      <p>Panel <b>Jak to działa?</b> (ikona żarówki po lewej) rozkłada wpisywaną komendę na części: sam program, jego opcje i to, na czym działa. Na przykład <code>ls -la</code> to „pokaż pliki”, „jako lista ze szczegółami” i „razem z ukrytymi plikami”.</p>
-      <p>Komendy, które mogą zaszkodzić, są oznaczone, na przykład <code>sudo</code> (działanie jako administrator) albo <code>rm -rf</code> (usunięcie na stałe, bez kosza). Gdy coś da się zrobić bez komend, Cherry podpowie program: Cocktail do aktualizacji i pakietów, Shrimp Apps do aplikacji, Panko do migawek.</p>
+      <h2>Karty</h2>
+      <p>Przycisk <b>nowej karty</b> u góry paska (albo Ctrl+Shift+T) otwiera terminal w tym samym folderze. Pod nazwą karty widać folder i gałąź gita. Krzyżyk zamyka kartę (albo Ctrl+Shift+W), Ctrl+Tab przełącza między kartami.</p>
     </section>
     <section>
-      <h2>Notatki</h2>
-      <p>Notatki to Twoje ulubione komendy z opisem. Przycisk <b>+</b> dodaje nową: komenda i krótki opis, co robi. Kliknięcie notatki wpisuje komendę do terminala; Enter uruchamia ją dopiero po Twoim potwierdzeniu.</p>
-    </section>
-    <section>
-      <h2>Skróty</h2>
+      <h2>Skróty jak w Windows</h2>
       <ul>
-        <li><b>Klawisze</b>: kombinacja, na przykład Alt+L, wpisuje wybraną komendę.</li>
-        <li><b>Skróty w zapisie</b>: krótka nazwa zamiast długiej komendy, na przykład <code>gs</code> zamiast <code>git status</code>.</li>
+        <li><b>Ctrl+C</b> kopiuje zaznaczony tekst. Bez zaznaczenia przerywa działający program, jak w każdym terminalu.</li>
+        <li><b>Ctrl+V</b> wkleja, <b>Ctrl+X</b> wycina, <b>Ctrl+A</b> zaznacza całą komendę, <b>Ctrl+Z</b> cofa, a <b>Ctrl+Y</b> ponawia zmianę.</li>
+        <li><b>Shift+strzałki</b> zaznaczają, <b>Ctrl+strzałki</b> skaczą o słowo, <b>Ctrl+Backspace</b> usuwa słowo. Pisanie zastępuje zaznaczenie.</li>
+        <li>Prawy przycisk myszy: Kopiuj, Wklej, Zaznacz wszystko. Ctrl+plus i Ctrl+minus powiększają i zmniejszają tekst.</li>
       </ul>
+      <p>Edycja komendy działa w wierszu poleceń. Programy otwarte w terminalu (na przykład edytor <code>micro</code>) dostają klawisze bez zmian.</p>
     </section>
     <section>
-      <h2>Historia</h2>
-      <p>Historia pamięta wpisane komendy. Pole na dole szuka w niej, kosz czyści całą historię. W ustawieniach (menu w prawym górnym rogu) wybierzesz, czy historia ma się usuwać sama po 1, 7 albo 30 dniach, oraz czy karty mają być u góry, czy po prawej.</p>
+      <h2>Notatki i historia</h2>
+      <p>Na dole paska są <b>Notatki</b> (ołówek) i <b>Historia</b> (zegar). Notatki to Twoje ulubione komendy z opisem; przycisk <b>+</b> dodaje nową. Historia pokazuje wykonane komendy i ma wyszukiwanie, a kosz czyści całą. Kliknięcie notatki albo komendy z historii wpisuje ją do terminala; Enter uruchamia ją dopiero po Twoim potwierdzeniu. W ustawieniach (menu u góry paska) wybierzesz, czy historia ma się usuwać sama po 1, 7 albo 30 dniach.</p>
+    </section>
+    <section>
+      <h2>Narzędzia</h2>
+      <p>Shrimp ma gotowe narzędzia wiersza poleceń: <code>z</code> (szybkie przechodzenie do folderów), <code>fzf</code> (Ctrl+T szuka plików), <code>atuin</code> (Ctrl+R szuka w historii), <code>eza</code> (czytelne <code>ls</code>), <code>bat</code>, <code>rg</code>, <code>fd</code>, <code>micro</code>, <code>y</code> (menedżer plików yazi), <code>tldr</code>, <code>distrobox</code> i <code>podman</code>. <code>fastfetch</code> pokazuje logo Shrimp i informacje o komputerze.</p>
     </section>
   </article>
   <article data-l="en" lang="en" aria-labelledby="h-en">
     <h1 class="h2" id="h-en">Cherry</h1>
-    <p class="lead">Cherry is the Shrimp terminal. You type commands as in any terminal, and next to it you see in plain words what they do.</p>
+    <p class="lead">Cherry is the Shrimp terminal with the zsh shell. Tabs are in a vertical bar on the left and the terminal fills the rest of the window.</p>
     <section>
-      <h2>How does it work?</h2>
-      <p>The <b>How does it work?</b> panel (the light bulb on the left) splits the command you type into parts: the program, its options and what it works on. For example <code>ls -la</code> is “list files”, “as a list with details” and “including hidden files”.</p>
-      <p>Commands that can do harm are marked, for example <code>sudo</code> (runs as administrator) or <code>rm -rf</code> (deletes permanently, without the trash). When something can be done without commands, Cherry suggests the program: Cocktail for updates and packages, Shrimp Apps for applications, Panko for snapshots.</p>
+      <h2>Tabs</h2>
+      <p>The <b>new tab</b> button at the top of the bar (or Ctrl+Shift+T) opens a terminal in the same folder. Under each tab you see its folder and git branch. The cross closes a tab (or Ctrl+Shift+W), and Ctrl+Tab switches between tabs.</p>
     </section>
     <section>
-      <h2>Notes</h2>
-      <p>Notes are your favourite commands with a description. The <b>+</b> button adds one: the command and a short description of what it does. Clicking a note types the command into the terminal; it runs only when you press Enter.</p>
-    </section>
-    <section>
-      <h2>Shortcuts</h2>
+      <h2>Shortcuts like in Windows</h2>
       <ul>
-        <li><b>Keys</b>: a combination such as Alt+L types the chosen command.</li>
-        <li><b>Abbreviations</b>: a short name instead of a long command, for example <code>gs</code> for <code>git status</code>.</li>
+        <li><b>Ctrl+C</b> copies the selected text. Without a selection it stops the running program, as in any terminal.</li>
+        <li><b>Ctrl+V</b> pastes, <b>Ctrl+X</b> cuts, <b>Ctrl+A</b> selects the whole command, <b>Ctrl+Z</b> undoes and <b>Ctrl+Y</b> redoes a change.</li>
+        <li><b>Shift+arrows</b> select, <b>Ctrl+arrows</b> jump by a word, <b>Ctrl+Backspace</b> deletes a word. Typing replaces the selection.</li>
+        <li>Right mouse button: Copy, Paste, Select all. Ctrl+plus and Ctrl+minus make the text bigger and smaller.</li>
       </ul>
+      <p>Editing works on the command line. Programs open in the terminal (for example the <code>micro</code> editor) get the keys unchanged.</p>
     </section>
     <section>
-      <h2>History</h2>
-      <p>History remembers the commands you typed. The box at the bottom searches it, and the trash clears all of it. In the settings (menu in the top right corner) you choose whether history deletes itself after 1, 7 or 30 days, and whether tabs are on top or on the right.</p>
+      <h2>Notes and history</h2>
+      <p>At the bottom of the bar are <b>Notes</b> (pencil) and <b>History</b> (clock). Notes are your favourite commands with a description; the <b>+</b> button adds one. History shows the commands you ran and can be searched, and the trash clears all of it. Clicking a note or a command from history types it into the terminal; it runs only when you press Enter. In the settings (menu at the top of the bar) you choose whether history deletes itself after 1, 7 or 30 days.</p>
+    </section>
+    <section>
+      <h2>Tools</h2>
+      <p>Shrimp comes with ready command line tools: <code>z</code> (jump to folders quickly), <code>fzf</code> (Ctrl+T finds files), <code>atuin</code> (Ctrl+R searches history), <code>eza</code> (a clearer <code>ls</code>), <code>bat</code>, <code>rg</code>, <code>fd</code>, <code>micro</code>, <code>y</code> (the yazi file manager), <code>tldr</code>, <code>distrobox</code> and <code>podman</code>. <code>fastfetch</code> shows the Shrimp logo and information about the computer.</p>
     </section>
   </article>
   <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>

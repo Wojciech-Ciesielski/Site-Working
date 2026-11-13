@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-en="Cocktail · Help · Shrimp">Cocktail · Pomoc · Shrimp</title>
+<meta name="description" content="Jak w Cocktailu aktualizować system i sterowniki, instalować pakiety i włączyć aktualizacje w tle." data-en="How to update the system and drivers, install packages and turn on background updates with Cocktail.">
+<link rel="canonical" href="https://shrimp-organization.dev/help/cocktail">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Cocktail · Pomoc · Shrimp">
+<meta property="og:description" content="Jak w Cocktailu aktualizować system i sterowniki, instalować pakiety i włączyć aktualizacje w tle.">
+<meta property="og:url" content="https://shrimp-organization.dev/help/cocktail">
+<meta property="og:image" content="https://shrimp-organization.dev/assets/logo-256.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo-256.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <a class="home" href="/" aria-label="Shrimp"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg></a>
+  <nav>
+    <a class="link help" href="/help/" aria-current="true" data-t="nav.help">Pomoc</a>
+    <div class="langs" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="doc">
+<div class="wrap">
+  <p class="crumb"><a class="link" href="/help/" data-t="nav.help">Pomoc</a></p>
+  <article data-l="pl" lang="pl" aria-labelledby="h-pl">
+    <h1 class="h2" id="h-pl">Cocktail</h1>
+    <p class="lead">Cocktail dba o aktualizacje Shrimp: system, sterowniki i pakiety.</p>
+    <section>
+      <h2>Aktualizacje w tle</h2>
+      <p>Aktualizacje automatyczne są włączone od pierwszego uruchomienia. Shrimp pobiera je po cichu i przygotowuje nową wersję systemu obok obecnej. Zmiany wchodzą przy następnym uruchomieniu komputera, więc nic nie przerywa pracy. Wyłączysz je przełącznikiem <b>Aktualizacje automatyczne</b> w zakładce <b>Aktualizacje</b>.</p>
+    </section>
+    <section>
+      <h2>Aktualizacja teraz</h2>
+      <ol>
+        <li>W zakładce <b>Aktualizacje</b> kliknij <b>Sprawdź aktualizacje</b>.</li>
+        <li>Kliknij <b>Zainstaluj</b>. Cocktail poprosi o Twoje hasło.</li>
+        <li>Uruchom komputer ponownie, kiedy Ci pasuje.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Sterowniki</h2>
+      <p>Sterowniki kart graficznych, Wi-Fi i oprogramowanie układowe urządzeń (np. BIOS) są w wierszu <b>Sterowniki</b>. Sterownik NVIDIA aktualizuje się razem z systemem.</p>
+    </section>
+    <section>
+      <h2>Pakiety</h2>
+      <p>Zakładka <b>Pakiety</b> pokazuje wszystkie zainstalowane pakiety alfabetycznie, z informacją, które mają nowszą wersję. Wyszukiwarka znajdzie też pakiety do zainstalowania. Pod <b>Historią</b> jest prosty wiersz poleceń: wpisz nazwę pakietu, a Cocktail zainstaluje go poleceniem <code>transactional-update pkg install</code>.</p>
+      <p>Programy z okienkami najlepiej instalować ze sklepu Shrimp Apps.</p>
+    </section>
+  </article>
+  <article data-l="en" lang="en" aria-labelledby="h-en">
+    <h1 class="h2" id="h-en">Cocktail</h1>
+    <p class="lead">Cocktail takes care of Shrimp updates: the system, drivers and packages.</p>
+    <section>
+      <h2>Background updates</h2>
+      <p>Automatic updates are on from the first start. Shrimp downloads them quietly and prepares the new system next to the current one. The changes take effect the next time you start the computer, so nothing interrupts your work. Turn them off with the <b>Automatic updates</b> switch in the <b>Updates</b> tab.</p>
+    </section>
+    <section>
+      <h2>Updating now</h2>
+      <ol>
+        <li>In the <b>Updates</b> tab click <b>Check for updates</b>.</li>
+        <li>Click <b>Install</b>. Cocktail asks for your password.</li>
+        <li>Restart the computer when it suits you.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Drivers</h2>
+      <p>Graphics and Wi-Fi drivers and device firmware (such as the BIOS) are in the <b>Drivers</b> row. The NVIDIA driver updates together with the system.</p>
+    </section>
+    <section>
+      <h2>Packages</h2>
+      <p>The <b>Packages</b> tab lists every installed package alphabetically and shows which ones have a newer version. Search also finds packages to install. Under <b>History</b> there is a simple command line: type a package name and Cocktail installs it with <code>transactional-update pkg install</code>.</p>
+      <p>Apps with windows are best installed from the Shrimp Apps store.</p>
+    </section>
+  </article>
+  <p class="all"><a class="link" href="/help/" data-t="help.all">Wszystkie tematy pomocy</a></p>
+</div>
+</main>
+
+<footer>
+  <div class="l"><svg class="logo" viewBox="-1.1 3.6 184.6 178.5" aria-hidden="true"><use href="/assets/logo.svg#s"/></svg><span>© <span data-year>2026</span> Shrimp</span></div>
+  <nav><a class="link" href="/help/" data-t="nav.help">Pomoc</a><a class="link" href="#top" data-t="nav.up">Do góry</a></nav>
+</footer>
+
+</body>
+</html>
