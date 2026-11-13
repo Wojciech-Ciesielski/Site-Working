@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/download/*"],
+  "exclude": ["/download/", "/download/index.html", "/download/install/*"]
+}
