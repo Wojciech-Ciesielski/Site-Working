@@ -1,0 +1,6 @@
+# Pliki workera i konfiguracji, nie strony (Cloudflare Workers: nie są publikowane jako zasoby).
+_worker.js
+_routes.json
+wrangler.jsonc
+.assetsignore
+.wrangler

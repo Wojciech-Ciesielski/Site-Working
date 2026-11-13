@@ -1,7 +1,7 @@
 // Pobieranie plików wydań z R2 pod adresem https://shrimp-organization.dev/download/<plik>
 // (np. /download/beta-5/Shrimp.x86_64-0.1.0.iso, /download/manifest.json). Bez osobnej domeny.
-// Wymaga powiązania R2 w projekcie Pages: nazwa zmiennej SHRIMP_ISO, kubeł site-iso-download.
-// _routes.json kieruje tu tylko /download/*; /download/ i /download/install to zwykłe strony.
+// Powiązanie R2 SHRIMP_ISO (kubeł site-iso-download) i trasy są w wrangler.jsonc (Cloudflare Workers, projekt „site”);
+// _routes.json robi to samo dla Cloudflare Pages. /download/ i /download/install to zwykłe strony.
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
